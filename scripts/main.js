@@ -1,6 +1,10 @@
-(function(global, undefined) {
+(function(window, undefined) {
 
 const el = {};
+
+window.set_page_style = function(stylesheet_url) {
+	el.page_css.href = stylesheet_url;
+}
 
 function run_scripts() {
 	el.page_scripts.innerHTML = '';
@@ -23,10 +27,11 @@ function navigate_to_page(page) {
 			res = await fetch('pages/404.html');
 		}
 		const contents = await res.text();
-		el.main_view.innerHTML = contents
-		run_scripts()
+		el.main_view.innerHTML = contents;
+		window.set_page_style("");
+		run_scripts();
 
-		global.history.replaceState('ja', 'Title', address);
+		window.history.replaceState('ja', 'Title', address);
 	})()
 }
 
@@ -49,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	const params = (new URL(document.location)).searchParams;
 	const page = params.get("page") || 'home';
-	
+
 	navigate_to_page(page)
 })
 

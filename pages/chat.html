@@ -1,7 +1,9 @@
 <div id="chat_message_list"></div>
 <div id="chat_message_input"></div>
 
-<script type="text/javascript">
+<script type="import">
+	window.set_page_style("pages/chat.css");
+
 	(async function(){
 		let res = await fetch('stylesheet.css');
 		let text = await res.text();

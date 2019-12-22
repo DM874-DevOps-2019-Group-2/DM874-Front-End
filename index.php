@@ -8,7 +8,7 @@
 	<link id="page_css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<script src="scripts/navigation.js"></script>
+	<script src="scripts/main.js"></script>
 	<nav id="main_navigation">
 		<a class="nav_button" data-nav="settings">Settings</a>
 		<a class="nav_button" data-nav="chat">Chat</a>
