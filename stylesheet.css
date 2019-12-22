@@ -1,0 +1,111 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-size: calc(16px + 0.5vw);
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #00009d;
+}
+
+body {
+    color: #2D2D2D;
+    background: #f8f8f8;
+    padding: 0;
+    margin: 0;
+}
+
+#main_navigation {
+    height: 100vh;
+    width: calc(200px + 10vw);
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2rem;
+    font-size: 1.5em;
+    border-right: 1px solid #aaa;
+}
+
+.nav_button {
+    position: relative;
+    background: transparent;
+    border: none;
+    width: 100%;
+    color: #000;
+    display: block;
+    user-select: none;
+}
+
+.nav_button:hover {
+    border: none;
+    color: #00009d;
+}
+
+#main_view {
+    height: 100vh;
+    width: calc(100% - (200px + 10vw));
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+a{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-decoration: none;
+    color: #0588D7;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (   -min-moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) {
+    html {
+      font-size: 30px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 4)      and (min-width: 2000px),
+only screen and (   min--moz-device-pixel-ratio: 4)      and (min-width: 2000px),
+only screen and (   -min-moz-device-pixel-ratio: 4)      and (min-width: 2000px),
+only screen and (     -o-min-device-pixel-ratio: 4/1)    and (min-width: 2000px),
+only screen and (        min-device-pixel-ratio: 4)      and (min-width: 2000px),
+only screen and (                min-resolution: 300dpi) and (min-width: 2000px),
+only screen and (                min-resolution: 4dppx)  and (min-width: 2000px) {
+    html {
+        font-size: 43px;
+    }
+}
+
+@media screen and (max-width: 24em) {
+
+    body main, body section, body header, body footer {
+        margin: 1.5rem auto;
+    }
+}
